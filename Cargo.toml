@@ -1,0 +1,18 @@
+[package]
+name = "staline_bot"
+version = "0.1.2"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.66"
+serde = "1.0.148"
+serenity = { version = "0.12.0", default-features = false, features = ["client", "gateway", "rustls_backend", "model"] }
+shuttle-runtime = "0.52.0"
+shuttle-serenity = "0.52.0"
+tokio = "1.26.0"
+tracing = "0.1.37"
+poise = "0.6.1"
+reqwest = "0.12.12"
+songbird = {version = "0.5.0", features = ["builtin-queue"]}
+symphonia = {version = "0.5.4", features = ["mp3", "ogg", "flac", "wav", "pcm"]}
+audiopus_sys = {version = "0.2.2"}
