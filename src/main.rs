@@ -47,6 +47,7 @@ async fn serenity(
                 commands::goulag(),
                 commands::liberation(),
                 commands::hymn(),
+                commands::activite()
             ],
             post_command: |ctx| {
                 Box::pin(async move {

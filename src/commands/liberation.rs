@@ -17,6 +17,8 @@ pub async fn liberation(
 
     if let Some(member) = guild_id.member(http_ctx, target_user.id).await.ok() {
         member.remove_role(http_ctx, GOULAG_ROLE_ID).await?;
+        ctx.reply("Utilisateur libéré.")
+            .await?;
     } else {
         ctx.reply("Utilisateur spécifié introuvable dans le serveur.")
             .await?;

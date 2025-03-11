@@ -8,5 +8,8 @@ pub async fn activite(ctx: Context<'_>,     #[description = "Activité"] activit
 ) -> Result<(), Error> {
     ctx.serenity_context().set_activity(Some(ActivityData::playing(activite)));
 
+    ctx.reply("Activité changée.")
+        .await?;
+
     Ok(())
 }
